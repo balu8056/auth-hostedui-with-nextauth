@@ -164,11 +164,13 @@ export default function Component() {
                                 const endSessionURL = `${String(process.env.NEXT_PUBLIC_COGNITO_DOMAIN)}/logout`
                                 signOut().then(() => {
                                   const endSessionParams = new URLSearchParams({
-                                    redirect_uri: `${String(
-                                      process.env.NEXT_PUBLIC_BASE_URL
-                                    )}/api/auth/callback/cognito`,
+                                    // redirect_uri: `${String(
+                                    //   process.env.NEXT_PUBLIC_BASE_URL
+                                    // )}/api/auth/callback/cognito`,
+                                    logout_uri: `${String(process.env.NEXT_PUBLIC_BASE_URL)}`,
                                     client_id: String(process.env.NEXT_PUBLIC_COGNITO_APP_CLIENT_ID),
-                                    response_type: 'code',
+                                    // response_type: 'code',
+                                    // scope: 'email openid phone',
                                   })
 
                                   window.open(`${endSessionURL}?${endSessionParams}`, '_self')
