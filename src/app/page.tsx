@@ -3,7 +3,6 @@
 import { Menu, Transition } from '@headlessui/react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { Fragment, useContext, useEffect, useState } from 'react'
 
 export interface UserTokens {
