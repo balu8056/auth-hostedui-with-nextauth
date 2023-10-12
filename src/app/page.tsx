@@ -76,7 +76,7 @@ export default function Component() {
             <div className="flex items-center space-x-2">
               {currentUser && (
                 <>
-                  <p className="text-2xl font-semibold whitespace-nowrap text-white">Hi {currentUser.name}!</p>
+                  <p className="text-2xl font-semibold whitespace-nowrap text-white">Hi {currentUser.email}!</p>
                   <p className="text-lg font-semibold whitespace-nowrap text-gray-500">({currentUser.role})</p>
                 </>
               )}
